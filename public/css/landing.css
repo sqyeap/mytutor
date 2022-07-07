@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+
+body {
+    background: url(../image/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px;
+}
+
+.navbar {
+    margin: 0 auto;
+    z-index: 1;
+    max-width: 1000px;
+}
+  
+.bar {
+    height: 8.02%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar ul {
+    padding-inline-start: 0px;
+}
+  
+.bar li {
+    display: inline-block;
+}
+
+.sectionlink {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+    padding: 0px 10px;
+}
+
+.sectionlink:hover {
+    color: blue;
+}
+
+.sectionlink:active {
+    color: darkslateblue;
+}
+
+button {
+    width: 110px;
+    height: 40px;
+    color: black;
+    background-color: rgb(75, 75, 252);
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0px 8px;
+    font-size: 18px;
+    font-family: 'Lora', serif;
+    font-weight: normal;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: solid 2px;
+    border-color: rgb(75, 75, 252);
+}
+
+button:active {
+    background-color: lightgrey;
+    transition: none;
+}
+
+.title {
+    font-family: 'Hahmlet', serif;
+    font-size: 48px;
+}
+
+.content {
+    max-width: 600px;
+    display: block;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 80px auto 100px 100px;
+}
+
+.content ul {
+    list-style: none;
+}
+
+.content_title {
+    font-family: 'Lora', serif;
+    font-size: 38px;
+    margin: 10px 0px;
+}
+
+.content_item {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    font-size: 24px;
+    margin: 5px 0px 0px 32px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style: none;
+    width: 100%;
+}
+
+.footer_title {
+    text-decoration: underline;
+}

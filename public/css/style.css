@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+
+@media screen and (max-width: 768px) {
+    .w3-container {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .w3-container {
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+
+body {
+    background: url(../image/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.w3-card {
+    background-color: lightgrey;
+    margin: 32px 0px 16px 0px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 10px;
+    opacity: 90%;
+}
+
+.button {
+    font-size: 15px;
+    width: 150px;
+    height: 44px;
+    color: white;
+    background-color: #483D8B;
+    border: none;
+    border-radius: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    color: white;
+    background-color: #8A2BE2;
+}
+
+.button:active {
+    opacity: 0.6;
+    transition: none;
+}
+
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+table th {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+}
