@@ -56,10 +56,49 @@
                 <th>Price</th>
                 <th>Total Learning Hours</th>
             </thead>
+            @foreach ($listsubject as $listItem)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $listItem->id}}</td>
+                <td>{{ $listItem->sub_title}}</td>
+                <td>{{ $listItem->sub_desc}}</td>
+                <td>{{ $listItem->sub_price}}</td>
+                <td>{{ $listItem->sub_hours}}</td>
+                <td>
+                    <div class="w3-cell">
+                        <form method="post" action="{{route('markDelete',$listItem->id)}}" accept-charset="UTF-8" onsubmit="return confirm('Delete?');">
+                            {{csrf_field()}}
+                            <button class="w3-button w3-round w3-block" type="submit">
+                                <i class="fa fa-trash"> </i></button>
+                        </form>
+                    </div>
+                    <div class="w3-cell">
+                        <button class="w3-button w3-round w3-block" onclick="document.getElementById('{{$loop->iteration}}').style.display='block';return false;"><i class="fa fa-pencil-square-o"> </i>
+                        </button>
+                    </div>
+                    <div id="{{$loop->iteration}}" class="w3-modal w3-animate-opacity">
+                        <div class="w3-modal-content w3-round" style="width:500px">
+                            <header class="w3-row w3-blue"> <span onclick="document.getElementById('{{$loop->iteration}}').style.display='none'" class="w3-button w3-display-topright w3-small">&times;</span>
+                                <h4 class="w3-margin-left">Update Product Form</h4>
+                            </header>
+                            <div class="w3-padding">
+                                <form method="post" action="{{route('markUpdate',$listItem->id)}}">
+                                    {{csrf_field()}}
+                                    <p><input class="w3-input w3-round w3-border" type="text" name="prname" placeholder="Name" value ="{{ $listItem->product_name}}"></p>
+                                    <p><input class="w3-input w3-round w3-border" type="text" name="prtype" placeholder="Type" value ="{{ $listItem->product_type}}"></p>
+                                    <p><input class="w3-input w3-round w3-border" type="number" name="prprice" placeholder="Price" step="any" value ="{{ $listItem->product_price}}"></p>
+                                    <p><input class="w3-input w3-round w3-border" type="number" name="prqty" placeholder="Quantity" value ="{{ $listItem->product_qty}}"></p>
+                                    </textarea></p>
+                                    <button class="w3-button w3-blue w3-round" type="submit">Update</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            @endforeach
         </table>
     </div>
-
-    
 
     <div id="newsubject" class="w3-modal w3-animate-opacity">
         <div class="w3-modal-content w3-round" style="width:500px">
